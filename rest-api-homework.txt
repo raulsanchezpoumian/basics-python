@@ -1,0 +1,191 @@
+#GET Examples
+
+Request
+URL: https://api.opensports.com/team
+Method: GET
+Accept: application/json
+
+Response
+Status Code: 200 (OK)
+Content type: application/json
+{
+    "team": [
+     {
+         "id": 1,
+         "name": "Boston Red Sox",
+         "sport_id": 1,
+         "city_id": 1,
+         "venue_id": 5 
+     },
+    {
+         "id": 2,
+         "name": "Yankees",
+         "sport_id": 1,
+         "city_id": 2,
+         "venue_id": 6 
+     }, 
+    {
+         "id": 1,
+         "name": "Baltimore Orioles",
+         "sport_id": 1,
+         "city_id": 3,
+         "venue_id": 7 
+     }]
+}
+
+
+
+Request
+URL: https://api.opensports.com/city
+Method: GET
+Accept: application/json
+
+Response
+Status Code: 200 (OK)
+Content type: application/json
+{
+    "city": [
+     {
+         "id": 1,
+         "name": "Boston",
+         "state": "Massachusetts",
+         "country": "United States"
+     },
+    {
+         "id": 2,
+         "name": "New York City",
+         "state": "New York",
+         "country": "United States"
+     },
+    {
+         "id": 3,
+         "name": "Baltomore",
+         "state": "Maryland",
+         "country": "United Statestps"
+     },
+    {
+         "id": 4,
+         "name": "Arlington",
+         "state": "Texas", 
+         "country": "United States"
+     }]
+}
+
+
+#POST Examples
+
+Request
+URL: https://api.opensports.com/team
+Method: POST
+Accept: application/json
+
+Body:
+ {
+    "name": "Rangers",
+    "sport_id": 1,
+    "city_id": 4,
+    "venue_id": 8 
+}
+
+Response
+Status Code: 201 (Created)
+Content type: application/json
+ {
+    "id": 4,
+    "name": "Texas Rangers",
+    "sport_id": 1,
+    "city_id": 4,
+    "venue_id": 8 
+}
+
+
+Request
+URL: https://api.opensports.com/city
+Method: POST
+Accept: application/json
+
+Body:
+ {
+    "name": "Oakland",
+    "state": "California",
+    "country": "United States"
+}
+
+Response
+Status Code: 201 (Created)
+Content type: application/json
+ {
+    "id": 5,
+    "name": "Oakland",
+    "state": "California",
+    "country": "United States"
+}
+
+
+
+#PUT Examples
+
+Request
+URL: https://api.opensports.com/team/2
+Method: PUT
+Accept: application/json
+
+Body:
+{
+    "name": "New York Yankees"
+}
+
+
+Status Code: 201 (Created)
+Content type: application/json
+
+{
+    "id": 2,
+    "name": "New York Yankees",
+    "sport_id": 1,
+    "city_id": 2,
+    "venue_id": 6 
+ }
+
+
+Request
+URL: https://api.opensports.com/city/3
+Method: PUT
+Accept: application/json
+
+Body:
+{
+    "country": "United States"
+}
+
+
+Status Code: 201 (Created)
+Content type: application/json
+
+ {
+    "id": 3,
+    "name": "Baltomore",
+    "state": "Maryland",
+    "country": "United States"
+  }
+
+
+
+#DELETE Examples
+
+Request
+URL: https://api.opensports.com/team/2
+Method: DELETE
+Accept: application/json
+
+Status Code: 200 (OK)
+Content type: application/json
+
+
+Request
+URL: https://api.opensports.com/city/4
+Method: DELETE
+Accept: application/json
+
+Status Code: 200 (OK)
+Content type: application/json
